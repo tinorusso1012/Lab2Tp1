@@ -1,0 +1,10 @@
+C:\Users\micac\source\repos\TpLab2\TpLab2\bin\Debug\TpLab2.exe.config
+C:\Users\micac\source\repos\TpLab2\TpLab2\bin\Debug\TpLab2.exe
+C:\Users\micac\source\repos\TpLab2\TpLab2\bin\Debug\TpLab2.pdb
+C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.csproj.AssemblyReference.cache
+C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.Form1.resources
+C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.Properties.Resources.resources
+C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.csproj.GenerateResource.cache
+C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.csproj.CoreCompileInputs.cache
+C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.exe
+C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.pdb
