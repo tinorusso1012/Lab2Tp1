@@ -13,8 +13,8 @@ namespace TpLab2
         {
             for (int i = 0; i < 4; i++) 
             {
-                Calabozo calabozonuevo;
-               int posicion= new calabozonuevo.GenerarCalabozos();
+               // Calabozo calabozonuevo = new Calabozo();
+               //int posicion= new calabozonuevo.GenerarCalabozos();
             
             }
 

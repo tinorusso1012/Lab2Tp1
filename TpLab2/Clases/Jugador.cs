@@ -10,7 +10,7 @@ namespace TpLab2
     {
         private string nombre;
         private int posicion;
-        public int Posicion;
+        public int Posicion { get; private set; };
         private bool turno = true;
         public string Nombre { get; private set; }
         public int CantidadGanadas { get; set; }
