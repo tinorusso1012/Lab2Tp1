@@ -1,0 +1,11 @@
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\bin\Debug\Calabazos_Dragones.exe.config
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\bin\Debug\Calabazos_Dragones.exe
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\bin\Debug\Calabazos_Dragones.pdb
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\obj\Debug\Calabazos_Dragones.csproj.AssemblyReference.cache
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\obj\Debug\Calabazos_Dragones.csproj.SuggestedBindingRedirects.cache
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\obj\Debug\Calabazos_Dragones.Form1.resources
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\obj\Debug\Calabazos_Dragones.Properties.Resources.resources
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\obj\Debug\Calabazos_Dragones.csproj.GenerateResource.cache
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\obj\Debug\Calabazos_Dragones.csproj.CoreCompileInputs.cache
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\obj\Debug\Calabazos_Dragones.exe
+E:\UTN\Laboratorio 2\Proyectos\Calabazos_Dragones\Calabazos_Dragones\obj\Debug\Calabazos_Dragones.pdb
