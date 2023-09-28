@@ -43,16 +43,16 @@ namespace TpLab2
             for (int i = 1; i < CantJugadores + 1; i++)
             {
                 bool resultado = sistema.AgregarJugador(i, "Prueba" + i);
-                if (resultado)
-                {
-                    MessageBox.Show("¡Jugador: " + "Prueba " + i + " agregado exitosamente!");
-                }
+                //if (resultado)
+                //{
+                //    MessageBox.Show("¡Jugador: " + "Prueba " + i + " agregado exitosamente!");
+                //}
             }
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            Inicializar cargarJuego = new Inicializar(2);
+            Inicializar cargarJuego = new Inicializar(1);
             cargarJuego.ShowDialog();
             btnMover.Visible = false;
         }
@@ -100,41 +100,57 @@ namespace TpLab2
                 movimientos = new Movimientos();
                 nuevo.Dispose();
                 bool HayGanador=false;
+                Jugador ganador = null;
+                
                 #region Juego Demo
-                //while (HayGanador != true) //Verifica ganador, pero todavia falta implementar el metodo
-                //{
-                //    //Cada jugador lanza un dado y mueve su caballero
-                //    //Habria que agregar un metodo para Verificar Ganador
+                while (HayGanador != true) //Verifica ganador, pero todavia falta implementar el metodo
+                {
+                    //Cada jugador lanza un dado y mueve su caballero
+                    //Habria que agregar un metodo para Verificar Ganador
+                    int r = sistema.NuevaRonda();
+                    movimientos.lbJuego.Items.Add("¡Empieza la ronda: " + (r) + "!");
 
+                    for (int i = 0; i < sistema.ListaJugadores.Count; i++)
+                    {
+                        if (HayGanador == false)
+                        {
 
-                //    for (int i = 0; i < sistema.ListaJugadores.Count; i++)
-                //    {
-                //        movimientos.lbJuego.Items.Add("¡Empieza la ronda: " + i + 1 + "!");
-                //        Jugador j = (Jugador)sistema.ListaJugadores[i];
+                        Jugador j = (Jugador)sistema.ListaJugadores[i];
 
-                //        int dado = 0;
-                //        if (j.VerificarTurno()) //Verificamos que pueda jugar
-                //        {
-                //            dado = j.Jugar(); //Tiramos el dado
-                //            movimientos.lbJuego.Items.Add("El jugador: " + j.Nombre + " lanzó: " + dado);
+                        int dado = 0;
+                       
+                        if (j.VerificarTurno()) //Verificamos que pueda jugar
+                        {
+                            dado = j.Jugar(); //Tiramos el dado
+                            movimientos.lbJuego.Items.Add("El jugador: " + j.Nombre + " lanzó: " + dado);
 
-                //        }
-                //        else
-                //        {
-                //            movimientos.lbJuego.Items.Add(j.Nombre + " no puede jugar este turno");
-                //        }
+                        }
+                        else
+                        {
+                            movimientos.lbJuego.Items.Add(j.Nombre + " no puede jugar este turno");
+                        }
+                            int posiciones = sistema.Jugar(j.Posicion, dado);
+                        if (posiciones < 49)
+                        {
+                            movimientos.lbJuego.Items.Add("Se movió el caballero de: " + j.Nombre + " esta en la pos: " + posiciones);
+                            MostrarTablero(j.Posicion);
+                        } else
+                        {
+                            MessageBox.Show("El Jugador: " + j.Nombre + " Gano");
+                                ganador = j;
+                                HayGanador = true;
+                        }
+                        }
 
-                //        if (sistema.Jugar(j.Posicion, dado))
-                //        {
-                //            movimientos.lbJuego.Items.Add("Se movió el caballero de: " + j.Nombre);
-                //            MostrarTablero(j.Posicion);
-                //        }
-                //        Console.Beep(37, 1000);
-                //    }
-                //}
-                //MessageBox.Show("El ganador es " + "!");
-                //movimientos.Dispose();
-            # endregion
+                        //if ()
+                        //Console.Beep(37, 1000);
+                    }
+                  
+                }
+                movimientos.ShowDialog();
+
+                movimientos.Dispose();
+                #endregion
             }
 
 
@@ -142,7 +158,7 @@ namespace TpLab2
         private void MostrarTablero(int nroJugador)
         {
             //lbTablero.Items.Clear();    
-            string tablero = sistema.ObtenerTablero(nroJugador);
+            string tablero = sistema.ObtenerJugEnTablero(nroJugador);
             movimientos.lbJuego.Items.Add(tablero);
 
         }
@@ -160,10 +176,13 @@ namespace TpLab2
                 {
                     dado = j.Jugar(); //Tiramos el dado
                     movimientos.lbJuego.Items.Add("El jugador: " + j.Nombre + " lanzó: " + dado);
-                    if (sistema.Jugar(j.Posicion, dado))
+                    if (sistema.Jugar(j.Posicion, dado) < 49)
                     {
                         movimientos.lbJuego.Items.Add("Se movió el caballero de: " + j.Nombre);
                         MostrarTablero(j.Posicion);
+                    } else
+                    {
+                        movimientos.lbJuego.Items.Add("El Jugador: " + j.Nombre + " Gano");
                     }
                 }
                 else

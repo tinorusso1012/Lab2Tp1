@@ -25,9 +25,8 @@ namespace TpLab2
                 piezas.Add(nuevo);              //Guardamos el caballero en el arreglo de piezas.
             }
         }
-        public override bool MoverPieza(int jugador, int movimiento) //Buscamos las piezas del jugador y las movemos
+        public override int MoverPieza(int jugador, int movimiento) //Buscamos las piezas del jugador y las movemos
         {
-            bool piezaMovida = false;
             Caballero caballero = null;
 
             //Buscamos el caballero del jugador
@@ -36,35 +35,32 @@ namespace TpLab2
             if (caballero != null) //Si existe un caballero para ese jugador
             {
                 //piezaMovida = ModificarCasilleros(caballero, movimiento);
-                if (caballero.Casillero < 50 && caballero.Casillero >= 0)
-                {
-                    caballero.Casillero += movimiento;
-                }
-                else 
-                {
-                    //caballero.Ganador(caballero);
-                }
-                piezaMovida = true;
+                caballero.Casillero += movimiento;
+              
             }
-            return piezaMovida;
+            return caballero.Casillero;
         }
 
         private Caballero BuscarCaballero(int jugador)
         {
             Caballero caballero = null;
-            foreach (var pieza in piezas)
+            bool Encontrado = false;
+            int i = 0;
+            while (Encontrado == false)
             {
+                Piezas pieza = (Piezas)piezas[i];
                 if (pieza is Caballero && ((Caballero)pieza).NroJugador == jugador)
                 {
                     caballero = (Caballero)pieza;
-
+                    Encontrado = true;
                 }
+                i++;
             }
 
             return caballero;
         }
 
-        public override string MostrarTablero(int nroJugador)
+        public override string MostrarJugEnTablero(int nroJugador)
         {
             string datos = "";
 

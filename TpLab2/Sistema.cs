@@ -48,7 +48,7 @@ namespace TpLab2
             listaDragones= new ArrayList();
             tableroActual = null;
             cantidadJugadores = 0;
-            nroRondas = 1;
+            nroRondas = 0;
         }
 
         public bool AgregarJugador(int nroJugador, string nombreJugador) //Recibe los parametros necesarios para crear un jugador y lo agrega al arraylist
@@ -98,10 +98,10 @@ namespace TpLab2
             cantidadJuegos++;
         }
 
-        public string ObtenerTablero(int nroJugador)
+        public string ObtenerJugEnTablero(int nroJugador)
         {
             //string[] tablero = tableroActual.MostrarTablero();
-            string tablero = tableroActual.MostrarTablero(nroJugador);
+            string tablero = tableroActual.MostrarJugEnTablero(nroJugador);
 
             return tablero;
         }
@@ -109,9 +109,9 @@ namespace TpLab2
         //Jugada
 
         //En una ronda cada jugador lanza su dado
-        public bool Jugar(int nroJugador, int movimiento)
+        public int Jugar(int nroJugador, int movimiento)
         {
-            bool jugada = tableroActual.MoverPieza(nroJugador, movimiento);
+            int jugada = tableroActual.MoverPieza(nroJugador, movimiento);
             return jugada;
         }
 

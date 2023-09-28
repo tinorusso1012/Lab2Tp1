@@ -22,8 +22,8 @@ namespace TpLab2
         }
         private bool turno = true;
         public int CantidadGanadas { get; set; }
-        private Random dado;
-
+        static Random dado = new Random();
+        
         public Jugador(int posicion, string nombre)
         {
             Nombre = nombre;     //Cada jugador es inicializado con un nombre.
@@ -44,11 +44,11 @@ namespace TpLab2
         }
         public int Jugar()
         {
-            dado = new Random();
+          
             int resultado = 0;
             if (turno)
             {
-                resultado = dado.Next(1, 7); //El jugador lanza el dado y devolvemos el resultado.
+                resultado = Jugador.dado.Next(1, 7); //El jugador lanza el dado y devolvemos el resultado.
                 turno = false;//Como ya lanzó el dado, su turno terminó
             }
             return resultado;

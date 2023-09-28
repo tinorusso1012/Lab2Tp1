@@ -88,7 +88,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox5.Image = global::TpLab2.Properties.Resources.c4;
-            this.pictureBox5.Location = new System.Drawing.Point(61, 191);
+            this.pictureBox5.Location = new System.Drawing.Point(1114, 172);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(95, 46);
             this.pictureBox5.TabIndex = 7;
@@ -110,7 +110,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::TpLab2.Properties.Resources.c2;
-            this.pictureBox3.Location = new System.Drawing.Point(395, 187);
+            this.pictureBox3.Location = new System.Drawing.Point(1012, 172);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 50);
             this.pictureBox3.TabIndex = 5;
@@ -120,7 +120,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::TpLab2.Properties.Resources.c3;
-            this.pictureBox2.Location = new System.Drawing.Point(277, 250);
+            this.pictureBox2.Location = new System.Drawing.Point(1012, 228);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(92, 50);
             this.pictureBox2.TabIndex = 4;
