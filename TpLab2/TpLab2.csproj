@@ -46,46 +46,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Basico.cs" />
-    <Compile Include="Clases\Caballero.cs" />
-    <Compile Include="Clases\Calabozo.cs" />
-    <Compile Include="Clases\Dragon.cs" />
-    <Compile Include="Clases\Experto.cs" />
+    <Compile Include="Basico.cs" />
+    <Compile Include="Caballero.cs" />
+    <Compile Include="Calabozo.cs" />
+    <Compile Include="Casillero.cs" />
+    <Compile Include="Dragon.cs" />
+    <Compile Include="EstadoCasillero.cs" />
+    <Compile Include="Experto.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Intermedio.cs" />
-    <Compile Include="Clases\Jugador.cs" />
-    <Compile Include="Clases\Piezas.cs" />
-    <Compile Include="ModoDeJuego.cs">
+    <Compile Include="Inicializar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModoDeJuego.Designer.cs">
-      <DependentUpon>ModoDeJuego.cs</DependentUpon>
+    <Compile Include="Inicializar.Designer.cs">
+      <DependentUpon>Inicializar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Intermedio.cs" />
+    <Compile Include="JuegoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JuegoNuevo.Designer.cs">
+      <DependentUpon>JuegoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jugador.cs" />
+    <Compile Include="Movimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos.Designer.cs">
+      <DependentUpon>Movimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Piezas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Sistema.cs" />
-    <Compile Include="Clases\Tablero.cs" />
+    <Compile Include="Tablero.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModoDeJuego.resx">
-      <DependentUpon>ModoDeJuego.cs</DependentUpon>
+    <EmbeddedResource Include="Inicializar.resx">
+      <DependentUpon>Inicializar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuegoNuevo.resx">
+      <DependentUpon>JuegoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos.resx">
+      <DependentUpon>Movimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,19 +123,16 @@
     <None Include="Resources\tablerojpg.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SoladadoAzul.png" />
+    <None Include="Resources\dragon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DragonRojoOscuro.png" />
+    <None Include="Resources\fondito.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Pruebas.PNG" />
+    <None Include="Resources\calabozo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PruebaDragonVerde.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\PruebaDragonAzul.jpg" />
+    <None Include="Resources\op1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
