@@ -23,7 +23,7 @@ namespace TpLab2
         }
         private ArrayList listaGanadores;
         private ArrayList listaJugadores;
-
+        public ArrayList listaDragones;
         public ArrayList ListaJugadores
         {
             get
@@ -45,6 +45,7 @@ namespace TpLab2
             cantidadJuegos = 0;
             listaGanadores = new ArrayList();
             listaJugadores = new ArrayList();
+            listaDragones= new ArrayList();
             tableroActual = null;
             cantidadJugadores = 0;
             nroRondas = 1;
@@ -57,6 +58,17 @@ namespace TpLab2
             {
                 Jugador jugador = new Jugador(nroJugador, nombreJugador);
                 listaJugadores.Add(jugador);
+                agregado = true;
+            }
+            return agregado;
+        }
+        public bool AgregarDragon(int nroDragon,  string nombreDragon) 
+        {
+            bool agregado = false;
+            if (listaJugadores.Count < 5)
+            {
+                //Dragon dragon = new Piezas(posX,posY,nroDragon);
+                //listaJugadores.Add(dragon);
                 agregado = true;
             }
             return agregado;

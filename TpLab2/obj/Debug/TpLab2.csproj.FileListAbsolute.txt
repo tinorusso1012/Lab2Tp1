@@ -11,3 +11,4 @@ C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.pdb
 C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.Inicializar.resources
 C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.Movimientos.resources
 C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.JuegoNuevo.resources
+C:\Users\micac\source\repos\TpLab2\TpLab2\obj\Debug\TpLab2.ListaGanadores.resources

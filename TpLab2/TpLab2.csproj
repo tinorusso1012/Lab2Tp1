@@ -73,6 +73,12 @@
       <DependentUpon>JuegoNuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="Jugador.cs" />
+    <Compile Include="ListaGanadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaGanadores.Designer.cs">
+      <DependentUpon>ListaGanadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Movimientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JuegoNuevo.resx">
       <DependentUpon>JuegoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaGanadores.resx">
+      <DependentUpon>ListaGanadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos.resx">
       <DependentUpon>Movimientos.cs</DependentUpon>
@@ -133,6 +142,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\op1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1p %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

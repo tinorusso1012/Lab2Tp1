@@ -15,6 +15,7 @@ namespace TpLab2
         Sistema sistema;
         Movimientos movimientos;
         JuegoNuevo nuevo;
+        ListaGanadores listaGanadores;
         int CantJugadores = 0;
 
         public Form1()
@@ -53,6 +54,7 @@ namespace TpLab2
         {
             Inicializar cargarJuego = new Inicializar(2);
             cargarJuego.ShowDialog();
+            btnMover.Visible = false;
         }
         private void btnDemo_Click(object sender, EventArgs e)
         {
@@ -61,6 +63,7 @@ namespace TpLab2
             int dificultad = 0;
             string dif = "";
             HardcodearJugadores();
+            
 
             if (sistema.ListaJugadores.Count > 3) //Evitamos que se puedan agregar jugadores si ya tenemos 4
             {
@@ -96,7 +99,8 @@ namespace TpLab2
             {
                 movimientos = new Movimientos();
                 nuevo.Dispose();
-
+                bool HayGanador=false;
+                #region Juego Demo
                 //while (HayGanador != true) //Verifica ganador, pero todavia falta implementar el metodo
                 //{
                 //    //Cada jugador lanza un dado y mueve su caballero
@@ -125,34 +129,14 @@ namespace TpLab2
                 //            movimientos.lbJuego.Items.Add("Se movió el caballero de: " + j.Nombre);
                 //            MostrarTablero(j.Posicion);
                 //        }
-                //Console.Beep(37, 1000);
-
-
-                //for (int i = 0; i < sistema.ListaJugadores.Count; i++) //Planteado por mati
-                //{
-                //    Jugador j = (Jugador)sistema.ListaJugadores[i];
-
-                //    int dado = 0;
-                //    if (j.VerificarTurno()) //Verificamos que pueda jugar
-                //    {
-                //        dado = j.Jugar(); //Tiramos el dado
-                //        movimientos.lbJuego.Items.Add("El jugador: " + j.Nombre + " lanzó: " + dado);
-
+                //        Console.Beep(37, 1000);
                 //    }
-                //    else
-                //    {
-                //        movimientos.lbJuego.Items.Add(j.Nombre + " no puede jugar este turno");
-                //    }
-
-                //    if (sistema.Jugar(j.Posicion, dado))
-                //    {
-                //        movimientos.lbJuego.Items.Add("Se movió el caballero de: " + j.Nombre);
-                //        MostrarTablero(j.Posicion);
-                //    }
-                //    //Console.Beep(37, 1000);
-
                 //}
+                //MessageBox.Show("El ganador es " + "!");
+                //movimientos.Dispose();
+            # endregion
             }
+
 
         }
         private void MostrarTablero(int nroJugador)
@@ -189,7 +173,30 @@ namespace TpLab2
                 //Console.Beep(37, 1000);
                 movimientos.ShowDialog();
             }
+            for (int i = 0;i<sistema.listaDragones.Count;i++) 
+            {
             
+            
+            
+            }
+            
+        }
+
+        private void btnGanadores_Click(object sender, EventArgs e)
+        {
+            listaGanadores = new ListaGanadores();
+                
+            for (int i = 0; i < sistema.VerGanadores().Count; i++) 
+            {
+                listaGanadores.lbGanadores.Items.Add(sistema.VerGanadores()[i]);
+            
+            }
+            listaGanadores.ShowDialog();
+            if (listaGanadores.btnCerrar.DialogResult == DialogResult.OK) 
+            {
+                listaGanadores.Dispose();
+            }
+
         }
     }
 }
